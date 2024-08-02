@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Oops...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="//tuberipper.com/favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<style>
+			.modal-session {
+				position: fixed; 
+				top: 0; 
+				left: 0; 
+				right: 0; 
+				bottom: 0; 
+				/*background-color: rgba(200, 200, 200, 0.9);*/
+				z-index: 9999; 
+				overflow: hidden;
+			}
+			.modal-session .modal-box {
+				position: absolute; 
+				top: 35%; 
+				left:0; 
+				right: 0; 
+				transform: translateY(-50%); 
+				text-align:center;
+				animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+				width: 90%;
+				margin: 0 auto;
+				padding: 30px;
+				background: #d9dfe5;
+				border-radius: 5px;
+				max-width: 800px;
+			}
+			.modal-box h3 {
+				font-weight: bold;
+				margin-bottom: 30px;
+			}
+			.modal-box .btn {
+				padding: 10px 24px;
+				margin: 0 5px 5px 10px;
+			}
+			@keyframes animatop {
+				0% { opacity: 0; top: 0%; }
+				100% { opacity: 1; top: 35%; }
+			}
+			.modal-message {
+				font-size: 20px;
+				line-height: 150%;
+				margin-bottom: 35px;
+			}
+			.modal-message span {
+				display: inline-block;
+			}
+			.modal-message span:empty {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="modal-session">
+			<div class="modal-box">
+				<h3>
+					<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 512 512" style="vertical-align: text-top;"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg>
+					Oops, something goes wrong...
+				</h3>
+				<div class="modal-message">
+					<span>Your download queue is busy.</span> <span>Is your previous file still downloading? Please try again a bit later.</span>				</div>
+				<a class="btn btn-lg btn-info" href="javascript:history.go(-1);">Return to Homepage</a>
+				<a class="btn btn-lg btn-default" href="javascript:history.go(-1);">Try again</a>
+			</div>
+		</div>
+	</body>
+</html>
